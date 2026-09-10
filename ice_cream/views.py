@@ -2,12 +2,14 @@
 # передавть в шаблон в этом задании не надо.
 # Достаточно просто получить ее, как второй обязательный
 # аргумент и вызвать соответствующий шаблон
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def ice_cream_detail(request, pk):
-    return HttpResponse(f'Мороженое номер {pk}')
+    template_name = 'ice_cream/detail.html'
+    return render(request, template_name) 
 
 
 def ice_cream_list(request):
-    return HttpResponse('Список мороженого')
+    template_name = 'ice_cream/list.html'
+    return render(request, template_name) 
