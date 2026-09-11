@@ -40,9 +40,9 @@ def ice_cream_detail(request, pk):
 
 def ice_cream_list(request):
     template_name = 'ice_cream/list.html'
-    catalog = ice_cream_catalog
+    ice_cream_list = ice_cream_catalog
     context = {
-        'catalog': catalog
+        'ice_cream_list': ice_cream_list
     }
 
     return render(request, template_name, context) 

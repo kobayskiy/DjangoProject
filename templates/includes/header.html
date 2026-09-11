@@ -1,2 +1,23 @@
-<p>Место для логотипа</p>
-<nav>Навигация</nav>
+<header>
+  {% load static %}
+  <img src="{% static 'img/logo.png' %}">
+  <nav>
+    <ul>
+      <li>
+        <a href="{% url 'homepage:index' %}">
+          Главная
+        </a>   
+      </li>
+      <li>
+        <a href="{% url 'ice_cream:ice_cream_list' %}">
+          Список мороженого
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'about:description' %}">
+          О проекте
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
